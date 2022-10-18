@@ -26,7 +26,6 @@ class App extends React.Component {
     this.state = {  
          quote: quotes[0].quote,
          author: quotes[0].author,
-         backgroundColor: colors[0].backgroundColor
       } 
     }
 
@@ -37,33 +36,34 @@ class App extends React.Component {
         quote: newQuote.quote,
         author: newQuote.author
       })
-      this.shuffleQuotes(quotes)
     }
 
-    shuffleQuotes = (arr) => {
-      return arr.sort(function () { return 0.5 - Math.random() });
-    }
 
     randomColor = (arr) => {
       let color = Math.floor(Math.random() * colors.length)
       let newColor = colors[color]
-      this.setState({
-        backgroundColor: newColor.backgroundColor
-      })
+      return newColor
     }
+
+    backColor = () => {
+      
+    }
+
 
   render() {
     return (
     <div className="App">
-      <header className="App-header">
-        <div style={styles.Wrapper}>
-          <div style={styles.Quote}>'{this.state.quote}'</div>
-          <div style={styles.Author}>- {this.state.author}</div>
-          <button style={styles.QuoteButton} onClick={this.randomQuote}>New Quote</button>
-          <a style={styles.TweetButton} href="#">Tweet</a>
+        <header className="App-header" style={{backgroundColor: this.randomColor(colors)}}>
+        <div className="Wrapper">
+          <div className="Quote">'{this.state.quote}'</div>
+          <div className="Author">- {this.state.author}</div>
+          <div className="Footer">
+            <a className="TweetButton" href="#">Tweet</a>
+            <button className="QuoteButton" onClick={this.randomQuote}>New Quote</button>
+          </div>
         </div>
-      </header>
-    </div>
+        </header>
+      </div>
     );
     }
   }
