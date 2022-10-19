@@ -5,7 +5,7 @@
 .App {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .App-header {
@@ -16,37 +16,60 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 } 
 
 .Wrapper {
+  width: 600px;
   background-color : white;
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 3px;
+  padding: 30px;
 }
 
-.TweetButton {
-  color: black; 
+.Quote {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 1.30em;
+  font-weight: 900;
 }
 
 .QuoteButton {
-  color: black;
-  border-radius: 10px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-right: 20px;
+  height: 39px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width:auto;
+  font-weight:500; 
+  cursor: pointer;
 } 
 
-.Quote {
-  color:black;
-
+.TweetButton {
+  height: 44px;
+  padding: 0px;
+  margin-top: -2.5px;
+  margin-left: 20px;
 }
 
+
 .Author {
-  color: black;
+  margin-top: 20px;
+  margin-right: 20px;;
   text-align: right;
+  font-size: 0.70em;
+  font-weight: 600;
 }
 
 .Footer {
-  background-color: blue;
+
+  width: 600px;
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+}
+
+.Atag {
+  height: 40px;
+
 }
